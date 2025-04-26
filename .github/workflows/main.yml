@@ -25,7 +25,7 @@ jobs:
     
     - name: Download files from Google Drive
       run: |
-        curl -L -o mario_dqn_icm.pth1500 "https://drive.google.com/uc?export=download&id=1MRAM-hnRbfpVGIoMXA3QA1g4vq5ukAM9"
+        curl -L -o mario_dqn_icm1500.pth "https://www.dropbox.com/scl/fi/t6wur3j16igcjysgwrpjz/mario_dqn_icm1500.pth?rlkey=lfrx2zz5u2screlzi29am2afo&st=yukcvo4d&dl=1"
 
     - name: 2. Installing dependencies
       run: |

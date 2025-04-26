@@ -68,7 +68,9 @@ class Agent(object):
         self.model.to(self.device)
         self.model.eval()
 
-        checkpoint = torch.load('mario_dqn_icm.pth1500', map_location=self.device)
+
+        # checkpoint = torch.load('pulltest.pth', map_location=self.device)
+        checkpoint = torch.load('mario_dqn_icm1500.pth', map_location=self.device)
         self.model.load_state_dict(checkpoint['model'])
 
         self.transform = T.Compose([
