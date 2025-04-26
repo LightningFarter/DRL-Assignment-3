@@ -14,7 +14,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-import matplotlib.pyplot as plt
 from torchvision import transforms as T
 
 from duelicm import FeatureExtractor, DuelingDQN
@@ -24,7 +23,7 @@ from duelicm import FeatureExtractor, DuelingDQN
 
 
 # class Visualizer:
-#     def __init__(self, width=256, height=240, fps=120):
+#     def __init__(self, width=256, height=240, fps=180):
 #         pygame.init()
 #         self.width = width
 #         self.height = height
@@ -69,7 +68,7 @@ class Agent(object):
         self.model.to(self.device)
         self.model.eval()
 
-        checkpoint = torch.load('checkpoints/mario_dqn_icm.pth1500', map_location=self.device)
+        checkpoint = torch.load('mario_dqn_icm.pth1500', map_location=self.device)
         self.model.load_state_dict(checkpoint['model'])
 
         self.transform = T.Compose([
